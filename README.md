@@ -1,6 +1,20 @@
 # Flask Mailroom Application
 
-Running at [http://afternoon-reef-51666.herokuapp.com/donations/](http://afternoon-reef-51666.herokuapp.com/donations/).
+Scott's URL:
+Running at [http://hidden-gorge-57833.herokuapp.com/donations/](http://hidden-gorge-57833.herokuapp.com/donations/).
+
+Known bug in the Create Donation Form:
+(500 Internal Server Error)
+
+  File "C:\Users\Scott\AppData\Local\Programs\Python\Python36\lib\site-packages\peewee.py", line 3728, in db_value
+    return value if value is None else self.adapt(value)
+ValueError: invalid literal for int() with base 10: 'Alice'
+127.0.0.1 - - [24/Jun/2018 19:55:51] "POST /create HTTP/1.1" 500 -
+
+I'm havign a difficult time finding why the name input value of 'Alice' has a value error.
+- the jinja2 template looks correct
+- the code looks correct in @app.route('/create', methods=['GET', 'POST'])
+
 
 ## Your Task
 
